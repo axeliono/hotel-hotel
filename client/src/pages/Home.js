@@ -5,10 +5,13 @@ import Services from '../components/Services'
 
 export default function Home() {
     return (
+        <>
         <Hero hero="defaultHero">
             <Banner title="Basic Rooms" subtitle="Basic rooms starting at $99!">
-                <Link to="/" className="btn-primary">Rooms</Link>
+                <Link to="/rooms" className="btn-primary">Rooms</Link>
             </Banner>
         </Hero>
+        <Services/>
+        </>
     )
 }
