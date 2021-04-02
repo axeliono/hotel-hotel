@@ -3,13 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+<<<<<<< HEAD
+=======
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "mongoose-extend-schema": "^1.0.0",
+    "stripe": "^8.141.0"
+  },
+  "devDependencies": {},
+>>>>>>> 165804b4c127d6b467d39afdad87de54846de2b4
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "",
+<<<<<<< HEAD
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.22.2"
   }
+=======
+  "license": "ISC"
+>>>>>>> 165804b4c127d6b467d39afdad87de54846de2b4
 }
