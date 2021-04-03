@@ -19,9 +19,6 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Room",
   },
-});
-
-const AdminUserSchema = extendSchema(userSchema, {
   firstName: {
     type: String,
     required: true,
@@ -31,6 +28,14 @@ const AdminUserSchema = extendSchema(userSchema, {
     type: String,
     required: true,
     trim: true,
+  },
+});
+
+const AdminUserSchema = extendSchema(userSchema, {
+  employeeId: {
+    type: Number,
+    required: true,
+    unique: true,
   },
 });
 
