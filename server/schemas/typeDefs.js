@@ -41,25 +41,32 @@ const typeDefs = gql`
   }
 
   type Auth {
-      token: ID
+      token: ID!
       user: User
   }
-
   type Query {
-    user(firstName: String!, lastName: String!): User
+    user(email: String!): User
+    me: User
     users: [User]
-    admin(firstName: String!, lastName: String!, employeeId): Admin
+
+    admin(firstName: String!, lastName: String!, employeeId: Int!): Admin
     admins: [Admin]
-    room(_id: ID, isPaid: Boolean, type: String, price: Int): [Room]
+
     rooms: [Room]
+    room(roomNumber: Int!): Room 
+
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
   }
 
   type Mutation {
-      addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-  }
+    login(email: String!, password: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    
+}
+
 `;
 
 module.exports = typeDefs;

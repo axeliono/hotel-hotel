@@ -46,13 +46,15 @@ db.once("open", async () => {
   await User.deleteMany();
 
   await User.create({
-    name: "Pamela Brown",
+    firstName: "Pamela",
+    lastName: "Brown",
     email: "pamela@testmail.com",
     password: "password12345",
   });
 
   await User.create({
-    name: "Ethan Holt",
+    firstName: "Ethan",
+    lastName: "Holt", 
     email: "eholt@testmail.com",
     password: "password12345",
   });
@@ -86,6 +88,7 @@ db.once("open", async () => {
     password: "chandler",
     firstName: "Chandler",
     lastName: "Green",
+    employeeId: 101
   });
 
   console.log("admins seeded");
