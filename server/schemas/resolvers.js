@@ -1,6 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Admin, Product, Category, Room } = require("../models");
-//add sign token
+const { signToken } = require("../utils/auth");
 //add stripe payment key
 
 const resolvers = {
@@ -43,6 +43,35 @@ const resolvers = {
 
       return { token, user };
     },
+
+    updateUser: async (parent, args, context) => {
+      if(context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, {new: true});
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
+
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      console.log(user);
+
+      if (!user) {
+        throw new AuthenticationError("Incorrect credentials");
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect credentials");
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
+
   },
 };
 
