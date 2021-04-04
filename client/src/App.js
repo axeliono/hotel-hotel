@@ -30,18 +30,10 @@ function App() {
         </ul>
       </nav>
       <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/rooms">
-          <Rooms />
-        </Route>
-        <Route path="/error">
-          <Error />
-        </Route>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/rooms" component={Rooms}/>         
+        <Route exact path="/error" component={Error}/>
       </Switch>
       </div>
        </Router>

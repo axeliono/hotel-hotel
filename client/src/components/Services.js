@@ -1,7 +1,8 @@
 //maybe add icons for services such as shuttles cocktails etc.
 
 import React, { Component } from 'react';
-import { FaShuttleVan } from 'react-icons/fa';
+import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
+
 
 export default class Services extends Component {
     state = {
@@ -28,7 +29,6 @@ export default class Services extends Component {
     render() {
         return (
             <section className="services">
-                <Title title="Hotel-Hotel Services" />
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (

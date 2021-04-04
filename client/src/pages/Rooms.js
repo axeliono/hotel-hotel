@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 import Banner from '../components/Banner'
 import Hero from '../components/Hero'
 
