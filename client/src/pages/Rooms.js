@@ -1,6 +1,6 @@
 import React, { Link } from 'react'
 import Banner from '../components/Banner'
-import Hero from '../components/Hero'
+import {Hero, Img} from '../components/Hero'
 
 export default function Rooms() {
     return (

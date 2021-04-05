@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
+import styled from 'styled-components';
 
 
 export default class Services extends Component {
@@ -24,9 +25,12 @@ export default class Services extends Component {
             }
         ]
     }
-
-
+    
+    
     render() {
+        const Services = styled.article`
+        align-items: center;
+        `
         return (
             <section className="services">
                 <div className="services-center">
