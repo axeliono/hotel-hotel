@@ -5,6 +5,19 @@ import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
 import styled from 'styled-components';
 
 
+const Wrapper = styled.section`
+display: flex;
+align-content: flex-start;
+height: 100%
+width: 80%
+.span {
+    justify-content: space-around;
+}
+`;
+const Icon = styled.span`
+color: orange;
+`
+
 export default class Services extends Component {
     state = {
         services: [
@@ -28,23 +41,24 @@ export default class Services extends Component {
     
     
     render() {
-        const Services = styled.article`
-        align-items: center;
-        `
+
         return (
             <section className="services">
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (
                             <article key={index} className="service">
-                                <span>{item.icon}</span>
+                                <Wrapper>
+                                <Icon>{item.icon}</Icon>
                                 <h3>{item.title}</h3>
                                 <p>{item.info}</p>
+                                </Wrapper>
                             </article>
                         )
                     })}
                 </div>
             </section>
+                    
         )
     }
 

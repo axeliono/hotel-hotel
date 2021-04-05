@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { ReactElement, Fragment, useState} from 'react'
 import Banner from '../components/Banner'
-import Hero from '../components/Hero'
+import './style.css'
+
 
 export default function Login() {
     return (
-      <></>
+      <>
+      
+
+      </>
     )
 }

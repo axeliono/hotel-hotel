@@ -16,8 +16,8 @@ import styled from 'styled-components';
 export default function Home() {
     return (
         <>
-        
         <Hero/>  
+        <Link to="/rooms" className="btn-primary">Rooms</Link>
         <Services/>
         </>
     )
