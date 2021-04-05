@@ -30,10 +30,10 @@ function App() {
         </ul>
       </nav>
       <Switch>
-        <Route path="/">
+        <Route exact path="/" component={Home}>
           <Home />
         </Route>
-        <Route path="/login">
+        <Route exact path="/login" >
           <Login />
         </Route>
         <Route path="/rooms">

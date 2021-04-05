@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Admin, Product, Category, Room } = require("../models");
+const { User, Admin, Category, Room, Order, Product } = require("../models");
 const { signToken } = require("../utils/auth");
 //add stripe payment key
 
@@ -34,6 +34,22 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+
+    products: async (parent, { category, name }) => {
+      const params = {};
+
+      if (category) {
+        params.category = category;
+      }
+
+      if (name) {
+        params.name = {
+          $regex: name,
+        };
+      }
+
+      return await Product.find(params).populate("category");
+    },
   },
 
   Mutation: {
@@ -45,11 +61,13 @@ const resolvers = {
     },
 
     updateUser: async (parent, args, context) => {
-      if(context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, {new: true});
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, {
+          new: true,
+        });
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError("Not logged in");
     },
 
     login: async (parent, { email, password }) => {
@@ -72,6 +90,34 @@ const resolvers = {
       return { token, user };
     },
 
+    orderRoom: async (parent, { rooms }, context) => {
+      if (context.user) {
+        const roomOrder = new Order({ rooms });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { orders: roomOrder },
+        });
+
+        console.log(roomOrder.purchaseDate.toString());
+
+        return order;
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
+    orderProduct: async (parent, { products }, context) => {
+      if (context.user) {
+        const itemOrder = new Order({ products });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { orders: itemOrder },
+        });
+
+        return itemOrder;
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
   },
 };
 
