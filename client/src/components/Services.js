@@ -1,7 +1,22 @@
 //maybe add icons for services such as shuttles cocktails etc.
 
 import React, { Component } from 'react';
-import { FaShuttleVan } from 'react-icons/fa';
+import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
+import styled from 'styled-components';
+
+
+const Wrapper = styled.section`
+display: flex;
+align-content: flex-start;
+height: 100%
+width: 80%
+.span {
+    justify-content: space-around;
+}
+`;
+const Icon = styled.span`
+color: orange;
+`
 
 export default class Services extends Component {
     state = {
@@ -23,24 +38,27 @@ export default class Services extends Component {
             }
         ]
     }
-
-
+    
+    
     render() {
+
         return (
             <section className="services">
-                <Title title="Hotel-Hotel Services" />
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (
                             <article key={index} className="service">
-                                <span>{item.icon}</span>
+                                <Wrapper>
+                                <Icon>{item.icon}</Icon>
                                 <h3>{item.title}</h3>
                                 <p>{item.info}</p>
+                                </Wrapper>
                             </article>
                         )
                     })}
                 </div>
             </section>
+                    
         )
     }
 

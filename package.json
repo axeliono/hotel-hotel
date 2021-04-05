@@ -11,6 +11,11 @@
     "seed": "cd server && npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
+  "dependencies": {
+    "react-flickity-component": "^3.6.1",
+    "react-icons": "^4.2.0",
+    "react-responsive-carousel": "^3.2.18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axeliono/hotel-hotel.git"
