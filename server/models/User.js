@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const extendSchema = require("mongoose-extend-schema");
 
 const { Schema } = mongoose;
+const Order = require("./Order");
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
@@ -15,10 +16,6 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  roomNumber: {
-    type: Schema.Types.ObjectId,
-    ref: "Room",
-  },
   firstName: {
     type: String,
     required: true,
@@ -29,6 +26,7 @@ const userSchema = new Schema({
     required: true,
     trim: true,
   },
+  orders: [Order.schema]
 });
 
 const AdminUserSchema = extendSchema(userSchema, {
