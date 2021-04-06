@@ -6,17 +6,24 @@ import styled from 'styled-components';
 
 
 const Wrapper = styled.section`
-display: flex;
-align-content: flex-start;
-height: 100%
-width: 80%
-.span {
-    justify-content: space-around;
-}
-`;
+    display: flex;
+    height: 100%
+    width: 80%
+    justify-content: space-evenly;
+    `;
 const Icon = styled.span`
-color: orange;
-`
+    color: orange;
+    padding: 2rem;
+    `
+const Title = styled.h3
+    `
+    padding: 2rem;
+    
+    `
+const Info = styled.p
+    `
+    padding: 2rem;
+    `
 
 export default class Services extends Component {
     state = {
@@ -47,11 +54,11 @@ export default class Services extends Component {
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return (
-                            <article key={index} className="service">
+                            <article key={index} className="service" style={{display: "flex", justifyContent: "space-evenly", alignItems:"center"}}>
                                 <Wrapper>
                                 <Icon>{item.icon}</Icon>
-                                <h3>{item.title}</h3>
-                                <p>{item.info}</p>
+                                <Title>{item.title}</Title>
+                                <Info>{item.info}</Info>
                                 </Wrapper>
                             </article>
                         )

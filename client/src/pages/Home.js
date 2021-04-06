@@ -7,9 +7,14 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import styled from 'styled-components';
 
-
-
-
+const Wrapper = styled.section
+`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%
+width: 100%
+`;
 
 
 
@@ -17,7 +22,9 @@ export default function Home() {
     return (
         <>
         <Hero/>  
-        <Link to="/rooms" className="btn-primary">Rooms</Link>
+            <Wrapper>
+                <Link to="/rooms" className="btn-primary">Rooms</Link>
+            </Wrapper>
         <Services/>
         </>
     )

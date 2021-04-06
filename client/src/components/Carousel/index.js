@@ -3,9 +3,9 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 
 
 
-export default class extends React.Component {
-    render() {
-        return (
+const Carousel = () => {
+    return (
+     
             <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
@@ -20,6 +20,8 @@ export default class extends React.Component {
                 <ButtonBack>Back</ButtonBack>
                 <ButtonNext>Next</ButtonNext>
             </CarouselProvider>
-        );
-    }
+    )
 }
+
+export default Carousel
+
