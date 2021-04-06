@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 const NavBar = styled.ul`
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
 flex-direction: row;
-
+border-image: url(https://i.imgur.com/dREL3hO.png);
 `
 const Nav = () => {
     return (
