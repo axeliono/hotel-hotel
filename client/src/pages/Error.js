@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import Hero from '../components/Hero'
+import Hero from '../components/hero'
 
 export default function Error() {
     return (
