@@ -22,9 +22,6 @@ export default function Home() {
     return (
         <>
         <Hero/>  
-            <Wrapper>
-                <Link to="/rooms" className="btn-primary">Rooms</Link>
-            </Wrapper>
         <Services/>
         </>
     )
