@@ -3,21 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "if-env": "^1.0.4",
-    "react-flickity-component": "^3.6.1",
-    "react-icons": "^4.2.0",
-    "react-responsive-carousel": "^3.2.18"
-  },
-  "devDependencies": {
-    "concurrently": "^6.0.1"
-  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "dependencies": {
+    "if-env": "^1.0.4",
+    "react-flickity-component": "^3.6.1",
+    "react-icons": "^4.2.0",
+    "react-responsive-carousel": "^3.2.18"
   },
   "repository": {
     "type": "git",

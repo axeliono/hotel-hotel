@@ -23,6 +23,12 @@ const roomSchema = new Schema({
     type: Boolean,
     required: true,
   },
+  bookingStart: {
+    type: Date
+  },
+  bookingEnd: {
+    type: Date
+  }
 });
 
 const Room = mongoose.model("Room", roomSchema);

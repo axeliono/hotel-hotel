@@ -6,7 +6,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    roomNumber: Room
+    orders: [Order]
   }
 
   type Admin {
@@ -24,6 +24,15 @@ const typeDefs = gql`
     price: Int
     description: String
     isPaid: Boolean
+    bookingStart: Int 
+    bookingEnd: Int 
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+    rooms: [Room]
   }
 
   type Category {
@@ -58,6 +67,8 @@ const typeDefs = gql`
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
+
+    order(_id: ID!): Order
   }
 
   type Mutation {
@@ -65,6 +76,8 @@ const typeDefs = gql`
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     
+    orderRoom(rooms: [ID]! ): Order
+    orderProduct(products: [ID]!): Order 
 }
 
 `;
