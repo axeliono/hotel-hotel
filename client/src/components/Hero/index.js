@@ -22,9 +22,7 @@ return (
     <>
   <Banner title="Basic Rooms" subtitle="Basic rooms starting at $99!"/>
                 
-    <Wrapper>  
-      <Carousel/>
-    </Wrapper>
+    <Carousel/>
       </>     
 )
 
