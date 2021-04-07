@@ -3,17 +3,20 @@
 import React, { Component } from 'react';
 import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
 import styled from 'styled-components';
-
+import '../../index.css'
 
 const Wrapper = styled.section`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     height: 100%
-    width: 80%
+    width: 100%
     justify-content: space-evenly;
     `;
 const Icon = styled.span`
     color: orange;
     padding: 2rem;
+    font-size: 3rem;
     `
 const Title = styled.h3
     `
@@ -50,21 +53,24 @@ export default class Services extends Component {
     render() {
 
         return (
-            <section className="services">
-                <div className="services-center">
+            
+            
+                <div className="services-center" >
                     {this.state.services.map((item, index) => {
                         return (
-                            <article key={index} className="service" style={{display: "flex", justifyContent: "space-evenly", alignItems:"center"}}>
-                                <Wrapper>
+                            <article key={index} className="service">
+                                    <Wrapper>
                                 <Icon>{item.icon}</Icon>
                                 <Title>{item.title}</Title>
                                 <Info>{item.info}</Info>
-                                </Wrapper>
+                                    </Wrapper>
+                                
                             </article>
                         )
                     })}
                 </div>
-            </section>
+                               
+         
                     
         )
     }
