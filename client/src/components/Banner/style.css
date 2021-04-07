@@ -4,4 +4,11 @@
     display:flex;
     justify-content: space-around;
     font-size: 2rem;
+    
+}
+h2{
+    text-shadow: #ffff;
+}
+p{
+    text-shadow: #ffff;
 }

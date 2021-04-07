@@ -7,6 +7,17 @@ import Rooms from './pages/Rooms';
 import Error from './pages/Error';
 import Nav from './components/Nav';
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#F21"
+    },
+    secondary: {
+      main: "#ffa500"
+    }
+  }
+});
 
 function App() {
   return (
