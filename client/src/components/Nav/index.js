@@ -6,17 +6,15 @@ const NavBar = styled.ul`
 display: flex;
 justify-content: space-evenly;
 flex-direction: row;
-border-image: url(https://i.imgur.com/dREL3hO.png);
+height: 10rem;
+background-size: cover;
 `
 const Nav = () => {
     return (
         <NavBar>
             <Link to="/">Home</Link>
             <Link to="/login">Login</Link>
-
-            <Link to="/rooms">Rooms</Link>
-          
-            <Link to="/error">Error</Link>
+            <Link to="/rooms">Rooms</Link> 
         </NavBar>
     )
 }

@@ -7,7 +7,7 @@ import '../../index.css'
 
 const Wrapper = styled.section`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto;
     height: 100%
     width: 100%
@@ -21,11 +21,12 @@ const Icon = styled.span`
 const Title = styled.h3
     `
     padding: 2rem;
-    
+    font-size: 4rem;
     `
 const Info = styled.p
     `
     padding: 2rem;
+    font-size: 2rem;
     `
 
 export default class Services extends Component {
