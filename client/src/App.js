@@ -7,12 +7,13 @@ import Nav from "./components/Nav";
 import Shop from "./components/Shop/index.js";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from './utils/store.js'
+import store from "./utils/store.js";
 
 function App() {
   return (
     <Router>
       <div>
+        {<Nav />}
         <Provider store={store}>
           <Switch>
             <Route exact path="/" component={Home} />
