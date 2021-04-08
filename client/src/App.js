@@ -6,6 +6,10 @@ import Login from './pages/Login';
 import Rooms from './pages/Rooms';
 import Error from './pages/Error';
 import Nav from './components/Nav';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Shop from './components/Shop';
+
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 const theme = createMuiTheme({
@@ -23,6 +27,7 @@ function App() {
   return (
     <Router>
     <div>
+     <Header />
       <Nav/>
       <Switch>
         <Route exact path="/" component={Home}/>
@@ -31,6 +36,7 @@ function App() {
         <Route exact path="/error" component={Error}/>
         <Route exact path="/shop" component={Shop}/>
       </Switch>
+      <Footer />
       </div>
        </Router> 
   );
