@@ -7,7 +7,6 @@ import Services from '../components/Services'
 import { Link } from 'react-router-dom';
 import './style.css';
 import styled from 'styled-components';
-import Nav from '../components/Nav'
 const Wrapper = styled.section
 `
 display: flex;
@@ -22,7 +21,6 @@ width: 100%
 export default function Home() {
     return (
         <>
-        <Nav/> 
         <Hero/>  
         <Services/>
         </>

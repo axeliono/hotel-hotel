@@ -26,18 +26,18 @@ const Wrapper = styled.section`
     `
     padding: 2rem;
     font-size: 4rem;
-    text-shadow: 2px 2px #F21;
+    text-shadow: 1px 1px #ca361a;
         &:hover {
-        text-shadow 4px 4px #F21;
+        text-shadow 2px 2px #ca361a;
     }
     `
 const Info = styled.p
     `
     padding: 2rem;
     font-size: 2rem;
-    text-shadow: 2px 2px #F21;
+    text-shadow: 1px 1px #ca361a;
         &:hover {
-        text-shadow 4px 4px #F21;
+        text-shadow 2px 2px #ca361a;
     }
     `
 
@@ -68,7 +68,7 @@ export default class Services extends Component {
         return (
             
             
-                <div className="services-center" >
+                <div className="services-center"style={{backgroundColor:"#eeb940"}} >
                     {this.state.services.map((item, index) => {
                         return (
                             <>

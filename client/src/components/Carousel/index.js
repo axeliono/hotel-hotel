@@ -8,14 +8,15 @@ const Carousel = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2200
+        autoplaySpeed: 3000
       };
     return (
-        <Slider {...settings} className="sliderDivs">
+        <>
+        <Slider {...settings} className="sliderDivs" style={{backgroundColor:"#6f080b"}}>
         <div>
           <img src="https://i.imgur.com/us6gMou.jpg"/>
         </div>
@@ -28,7 +29,15 @@ const Carousel = () => {
         <div>
           <img src="https://i.imgur.com/AhxPlW9.jpg"/>
         </div>
+        <div>
+          <img src="https://i.imgur.com/IhpjTEE.jpg"/>
+        </div>
+        <div>
+          <img src="https://i.imgur.com/LyyGSfj.jpg"/>
+        </div>
       </Slider>
+     
+      </>
     )
 }
 

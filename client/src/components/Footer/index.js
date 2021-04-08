@@ -47,12 +47,15 @@ export default function Footer() {
                 <h2>1234 Street St.</h2>
                 <h2>Austin, TX 12345</h2>
                 <Button>
-                    <Link to="/">
+                    <Link to="/reservations">
                         BOOK NOW
                     </Link>
                 </Button>
             </Wrapper>
-            <Icon><FaHotel /></Icon>
+            
+                <Link to="/">
+                    <Icon><FaHotel /></Icon>
+                </Link>
             <Wrapper>
                 <h1>follow us on ... </h1>
                 <IconGroup>
