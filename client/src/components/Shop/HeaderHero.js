@@ -11,14 +11,15 @@ var settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2200,
+  autoplaySpeed: 2100,
+  centerPadding: "150px",
 };
 
 const HeaderHero = () => {
   return (
     <header>
       <Container justify="center">
-        <Grid container spacing={1} justify="center">
+        <Grid container spacing={1} justify="center" shadow>
           <Grid container item xs={12} spacing={1} justify="center">
             <Grid container item xs={2} justify="center">
               <Button color="inherit">
@@ -40,7 +41,7 @@ const HeaderHero = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container>
+      {/* <Container>
         <Slider {...settings} className="sliderDivs">
           <div>
             <img src="https://i.imgur.com/us6gMou.jpg" alt="alt1" />
@@ -55,7 +56,7 @@ const HeaderHero = () => {
             <img src="https://i.imgur.com/AhxPlW9.jpg" alt="alt4" />
           </div>
         </Slider>
-      </Container>
+      </Container> */}
     </header>
   );
 };

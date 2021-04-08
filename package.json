@@ -12,7 +12,8 @@
     "heroku-postbuild": "cd client && npm run build"
   },
   "dependencies": {
-    "react-icons": "^4.2.0"
+    "concurrently": "^6.0.1",
+    "if-env": "^1.0.4"
   },
   "repository": {
     "type": "git",
