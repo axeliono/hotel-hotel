@@ -20,12 +20,11 @@ export default function Hero() {
 
 return (
     <>
-  <Banner title="Basic Rooms" subtitle="Basic rooms starting at $99!"/>
-                
-    <Carousel/>
+    <Carousel style={{borderBottom:"2rem"}}/>
+
+
+  <Banner title="Basic Rooms" subtitle="Starting @ $99!"/>     
       </>     
 )
-
-
 };
 
