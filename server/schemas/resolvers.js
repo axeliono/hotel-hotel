@@ -31,6 +31,7 @@ const resolvers = {
     },
     //get info for a SINGLE ROOM
     room: async (parent, {}) => {},
+    
     categories: async () => {
       return await Category.find();
     },
