@@ -50,54 +50,37 @@ const ItemCard = (item) => {
   };
 
   return (
-    <Container color="inherit">
-      <Card className={classes.root} color="primary">
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={image}
-            title={name}
-            hover="true"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              justify="center"
-            >
-              Name: {name}
-            </Typography>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              justify="center"
-            >
-              Amount in stock: {quantity}
-            </Typography>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              justify="center"
-            >
-              ${price}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions justify="center">
-          <Button
-            size="large"
-            color="primary"
-            hover="secondary"
-            onClick={addToCart}
-          >
-            Purchase
-          </Button>
-        </CardActions>
-      </Card>
-    </Container>
+    <Card className={classes.root} color="primary">
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={image}
+          title={name}
+          hover="true"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" justify="center">
+            Name: {name}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="h2" justify="center">
+            Amount in stock: {quantity}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="h2" justify="center">
+            ${price}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions justify="center">
+        <Button
+          size="large"
+          color="primary"
+          hover="secondary"
+          onClick={addToCart}
+        >
+          Purchase
+        </Button>
+      </CardActions>
+    </Card>
   );
 };
 
