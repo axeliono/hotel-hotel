@@ -6,6 +6,7 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/react-hooks";
 import { isdbPromise } from "../../utils/helpers";
+import { Grid } from "@material-ui/core";
 
 const ShopItems = () => {
   const state = useSelector((state) => state);
@@ -46,17 +47,21 @@ const ShopItems = () => {
   }
 
   return (
-    <Container justify="center">
-      {filterProducts().map((product) => (
-        <ItemCard
-          key={product._id}
-          _id={product._id}
-          image={product.image}
-          name={product.name}
-          price={product.price}
-          quantity={product.quantity}
-        />
-      ))}
+    <Container alignContent="center">
+      <Grid container justify="center" spacing={1} >
+        {filterProducts().map((product) => (
+          <Grid item xs={6} justify="center" >
+            <ItemCard
+              key={product._id}
+              _id={product._id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              quantity={product.quantity}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </Container>
   );
 };

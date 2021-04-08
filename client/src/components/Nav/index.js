@@ -15,11 +15,12 @@ const Nav = () => {
 
         <NavBar>
             <Link to="/">Home</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/login">Account</Link>
 
             <Link to="/rooms">Rooms</Link>
           
             <Link to="/shop">Shop</Link>
+            
         </NavBar>
     )
 }

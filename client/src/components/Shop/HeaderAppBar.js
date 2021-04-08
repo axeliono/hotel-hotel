@@ -10,14 +10,11 @@ const HeaderAppBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h5" color="inherit">
-          <Link to="/">Hotel Hotel</Link>
+        <Typography color="secondary">
+          <Button  variant="h3">
+            <ShoppingCart /> Cart
+          </Button>
         </Typography>
-        <Button color="inherit">Login</Button>
-        <Button color="inherit">Create Account</Button>
-        <Button color="default">
-          <ShoppingCart /> Cart
-        </Button>
       </Toolbar>
     </AppBar>
   );

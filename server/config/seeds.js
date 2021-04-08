@@ -20,6 +20,7 @@ db.once("open", async () => {
       description:
         "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       category: categories[0]._id,
+      image: "cookie-tin.jpg",
       price: 5.99,
       quantity: 500,
     },
@@ -30,6 +31,7 @@ db.once("open", async () => {
         "Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.",
       price: 7.99,
       quantity: 20,
+      image: "cookie-tin.jpg",
     },
     {
       name: "Spinning Top",
@@ -38,6 +40,7 @@ db.once("open", async () => {
         "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
       price: 5.99,
       quantity: 1000,
+      image: "cookie-tin.jpg",
     },
   ]);
 
@@ -54,7 +57,7 @@ db.once("open", async () => {
 
   await User.create({
     firstName: "Ethan",
-    lastName: "Holt", 
+    lastName: "Holt",
     email: "eholt@testmail.com",
     password: "password12345",
   });
@@ -88,7 +91,7 @@ db.once("open", async () => {
     password: "chandler",
     firstName: "Chandler",
     lastName: "Green",
-    employeeId: 101
+    employeeId: 101,
   });
 
   console.log("admins seeded");
