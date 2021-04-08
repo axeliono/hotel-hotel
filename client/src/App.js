@@ -1,4 +1,3 @@
-
 import './index.css';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
@@ -22,7 +21,6 @@ const theme = createMuiTheme({
     }
   }
 });
-
 function App() {
   return (
     <Router>
@@ -38,7 +36,7 @@ function App() {
       </Switch>
       <Footer />
       </div>
-       </Router> 
+    </Router>
   );
 }
 
