@@ -9,10 +9,15 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "date-fns": "^2.19.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+<<<<<<< HEAD
+    "react-nice-dates": "^3.1.0",
+=======
     "react-redux": "^7.2.3",
+>>>>>>> f50b9c5fe770b8bdc64ae57e09b8f062b5cb5793
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
