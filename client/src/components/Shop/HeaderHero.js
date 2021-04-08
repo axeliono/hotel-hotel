@@ -12,7 +12,7 @@ var settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2100,
-  centerPadding: '150px'
+  centerPadding: "150px",
 };
 
 const HeaderHero = () => {
@@ -41,7 +41,7 @@ const HeaderHero = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container>
+      {/* <Container>
         <Slider {...settings} className="sliderDivs">
           <div>
             <img src="https://i.imgur.com/us6gMou.jpg" alt="alt1" />
@@ -56,7 +56,7 @@ const HeaderHero = () => {
             <img src="https://i.imgur.com/AhxPlW9.jpg" alt="alt4" />
           </div>
         </Slider>
-      </Container>
+      </Container> */}
     </header>
   );
 };
