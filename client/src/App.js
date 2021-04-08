@@ -6,6 +6,7 @@ import Rooms from './pages/Rooms';
 import Error from './pages/Error';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
+import Reservations from './components/Reservations';
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/rooms" component={Rooms}/>         
         <Route exact path="/error" component={Error}/>
         <Route exact path="/shop" component={Shop} />
+        <Route exact path="/reserve" component={Reservations} />
       </Switch>
       </div>
        </Router> 
