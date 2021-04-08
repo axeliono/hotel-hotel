@@ -7,25 +7,38 @@ import '../../index.css'
 
 const Wrapper = styled.section`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto;
     height: 100%
     width: 100%
     justify-content: space-evenly;
     `;
-const Icon = styled.span`
-    color: orange;
+    // background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    const Icon = styled.span`
+    color: #010203;
     padding: 2rem;
     font-size: 3rem;
+    
     `
-const Title = styled.h3
+    const Title = styled.h3
     `
     padding: 2rem;
-    
+    font-size: 4rem;
+    text-shadow: 2px 2px #F21;
+        &:hover {
+        text-shadow 4px 4px #F21;
+    }
     `
 const Info = styled.p
     `
     padding: 2rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px #F21;
+        &:hover {
+        text-shadow 4px 4px #F21;
+    }
     `
 
 export default class Services extends Component {
@@ -58,6 +71,7 @@ export default class Services extends Component {
                 <div className="services-center" >
                     {this.state.services.map((item, index) => {
                         return (
+                            <>
                             <article key={index} className="service">
                                     <Wrapper>
                                 <Icon>{item.icon}</Icon>
@@ -66,6 +80,8 @@ export default class Services extends Component {
                                     </Wrapper>
                                 
                             </article>
+                                       
+                            </>
                         )
                     })}
                 </div>
