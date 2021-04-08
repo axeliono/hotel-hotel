@@ -4,21 +4,19 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
 import ShoppingCart from "@material-ui/icons/ShoppingCart";
+import { Link } from "react-router-dom";
 
 const HeaderAppBar = () => {
   return (
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h5" color="inherit">
-            Hotel Shop
-          </Typography>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Create Account</Button>
-          <Button color="default">
+    <AppBar position="static">
+      <Toolbar>
+        <Typography color="secondary">
+          <Button  variant="h3">
             <ShoppingCart /> Cart
           </Button>
-        </Toolbar>
-      </AppBar>
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 

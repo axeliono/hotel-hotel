@@ -24,8 +24,8 @@ const typeDefs = gql`
     price: Int
     description: String
     isPaid: Boolean
-    bookingStart: Int 
-    bookingEnd: Int 
+    bookingStart: Int
+    bookingEnd: Int
   }
 
   type Order {
@@ -50,8 +50,8 @@ const typeDefs = gql`
   }
 
   type Auth {
-      token: ID!
-      user: User
+    token: ID!
+    user: User
   }
   type Query {
     user(email: String!): User
@@ -62,7 +62,7 @@ const typeDefs = gql`
     admins: [Admin]
 
     rooms: [Room]
-    room(roomNumber: Int!): Room 
+    room(roomNumber: Int!): Room
 
     categories: [Category]
     products(category: ID, name: String): [Product]
@@ -73,13 +73,28 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    
-    orderRoom(rooms: [ID]! ): Order
-    orderProduct(products: [ID]!): Order 
-}
+    addUser(
+      firstName: String!
+      lastName: String!
+      email: String!
+      password: String!
+    ): Auth
+    updateUser(
+      firstName: String
+      lastName: String
+      email: String
+      password: String
+    ): User
 
+    orderRoom(rooms: [ID]!): Order
+    orderProduct(products: [ID]!): Order
+
+    updateProduct(_id: ID!, quantity: Int!): Product
+  }
+
+  type Checkout {
+    session: ID
+  }
 `;
 
 module.exports = typeDefs;

@@ -15,10 +15,20 @@ const Nav = () => {
     return (
 
         <NavBar>
+<<<<<<< HEAD
             <Link to="/" className="nav_link">Home</Link>
             <Link to="/login" className="nav_link">Login</Link>
             <Link to="/rooms" className="nav_link">Rooms</Link> 
             {/* <Link to="/shop" className="nav_link">Shop</Link> */}
+=======
+            <Link to="/">Home</Link>
+            <Link to="/login">Account</Link>
+
+            <Link to="/rooms">Rooms</Link>
+          
+            <Link to="/shop">Shop</Link>
+            
+>>>>>>> 3370822790e8b11077b3689763d2e13ebc440d85
         </NavBar>
     )
 }
