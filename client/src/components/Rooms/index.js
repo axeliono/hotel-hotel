@@ -9,6 +9,7 @@ const Rooms = () => {
     return (
         <div>
             <img src=""/>
+            
         </div>
     )
 }
