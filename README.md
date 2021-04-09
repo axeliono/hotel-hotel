@@ -1,7 +1,7 @@
 # Hotel-Hotel
 
 ## Description
-It is a hotel app that lets you reserve a room and order room service.
+This application will allow anyone interested in our boutique hotel to reserve a room, buy something from the hotel shop and view hotel amenities.
 
 ## Built With
 * Javascript
