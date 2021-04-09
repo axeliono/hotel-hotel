@@ -10,7 +10,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { LOGIN } from "../utils/mutations";
+import { LOGIN, ADD_USER } from "../utils/mutations";
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import Auth from "../utils/auth";
 import { useSelector } from "react-redux";
@@ -51,6 +51,7 @@ export default function SignIn() {
 
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
+  const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -59,10 +60,25 @@ export default function SignIn() {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
+      console.log(token);
       Auth.login(token);
     } catch (e) {
       console.log(e);
     }
+  };
+
+  const handleSignupSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
   };
 
   const handleChange = (event) => {
@@ -141,7 +157,7 @@ export default function SignIn() {
         <Typography component="h1" variant="">
           Create Account
         </Typography>
-        <form className={classes.form} noValidate onSubmit={handleFormSubmit}>
+        <form className={classes.form} noValidate onSubmit={handleSignupSubmit}>
           <TextField
             variant="outlined"
             margin="normal"

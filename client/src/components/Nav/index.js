@@ -1,29 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Auth from "../../utils/auth";
 
 const NavBar = styled.ul`
-display: flex;
-justify-content: space-evenly;
-flex-direction: row;
-border-image: url(https://i.imgur.com/dREL3hO.png);
-width: 50%;
-`
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-image: url(https://i.imgur.com/dREL3hO.png);
+  width: 50%;
+`;
 
 const Nav = () => {
-    return (
+  return (
+    <NavBar>
+      <Link to="/">Home</Link>
+      <Link to="/login">Account</Link>
 
-        <NavBar>
-            <Link to="/">Home</Link>
-            <Link to="/login">Account</Link>
+      <Link to="/rooms">Rooms</Link>
 
-            <Link to="/rooms">Rooms</Link>
-          
-            <Link to="/shop">Shop</Link>
-            
-        </NavBar>
-    )
-}
-
+      <Link to="/shop">Shop</Link>
+      {Auth.loggedIn() ? (
+        <>
+          <Link to="/" onClick={Auth.logout}>
+            Logout
+          </Link>
+        </>
+      ) : (
+        ""
+      )}
+    </NavBar>
+  );
+};
 
 export default Nav;

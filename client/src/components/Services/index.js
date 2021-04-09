@@ -1,9 +1,9 @@
 //maybe add icons for services such as shuttles cocktails etc.
 
-import React, { Component } from 'react';
-import { FaShuttleVan, FaCookie, FaCocktail } from 'react-icons/fa';
-import styled from 'styled-components';
-import '../../index.css'
+import React, { Component } from "react";
+import { FaShuttleVan, FaCookie, FaCocktail } from "react-icons/fa";
+import styled from "styled-components";
+import "../../index.css";
 
 const Wrapper = styled.section`
     display: grid;
@@ -13,82 +13,72 @@ const Wrapper = styled.section`
     width: 100%
     justify-content: space-evenly;
     `;
-    // background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    const Icon = styled.span`
-    color: #010203;
-    padding: 2rem;
-    font-size: 3rem;
-    
-    `
-    const Title = styled.h3
-    `
+// background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
+// background-repeat: no-repeat;
+// background-size: cover;
+const Icon = styled.span`
+  color: #010203;
+  padding: 2rem;
+  font-size: 3rem;
+`;
+const Title = styled.h3`
     padding: 2rem;
     font-size: 4rem;
     text-shadow: 2px 2px #F21;
         &:hover {
         text-shadow 4px 4px #F21;
+        cursor: default
     }
-    `
-const Info = styled.p
-    `
+    `;
+const Info = styled.p`
     padding: 2rem;
     font-size: 2rem;
     text-shadow: 2px 2px #F21;
         &:hover {
         text-shadow 4px 4px #F21;
+        cursor: default
     }
-    `
+    `;
 
 export default class Services extends Component {
-    state = {
-        services: [
-            {
-                icon: <FaShuttleVan />,
-                title: "Airport Shuttle",
-                info: "Complimentary shuttle to and from the airport!"
-            },
-            {
-                icon: <FaCookie />,
-                title: "Complimentary Cookie",
-                info: "Complimentary cookie at check-in!"
-            },
-            {
-                icon: <FaCocktail />,
-                title: "Happy Hour",
-                info: "Join us for a complimentary cocktail during happy hour daily from 4 PM to 5 PM!"
-            }
-        ]
-    }
-    
-    
-    render() {
+  state = {
+    services: [
+      {
+        icon: <FaShuttleVan />,
+        title: "Airport Shuttle",
+        info: "Complimentary shuttle to and from the airport!",
+      },
+      {
+        icon: <FaCookie />,
+        title: "Complimentary Cookie",
+        info: "Complimentary cookie at check-in!",
+      },
+      {
+        icon: <FaCocktail />,
+        title: "Happy Hour",
+        info:
+          "Join us for a complimentary cocktail during happy hour daily from 4 PM to 5 PM!",
+      },
+    ],
+  };
 
-        return (
-            
-            
-                <div className="services-center" >
-                    {this.state.services.map((item, index) => {
-                        return (
-                            <>
-                            <article key={index} className="service">
-                                    <Wrapper>
-                                <Icon>{item.icon}</Icon>
-                                <Title>{item.title}</Title>
-                                <Info>{item.info}</Info>
-                                    </Wrapper>
-                                
-                            </article>
-                                       
-                            </>
-                        )
-                    })}
-                </div>
-                               
-         
-                    
-        )
-    }
-
+  render() {
+    return (
+      <div className="services-center">
+        {this.state.services.map((item, index) => {
+          return (
+            <>
+              <article key={index} className="service">
+                <Wrapper>
+                  <Icon>{item.icon}</Icon>
+                  <Title>{item.title}</Title>
+                  <Info>{item.info}</Info>
+                </Wrapper>
+              </article>
+            </>
+          );
+        })}
+      </div>
+    );
+  }
 }

@@ -8,13 +8,14 @@ db.once("open", async () => {
     { name: "Food" },
     { name: "Household Supplies" },
     { name: "Toys" },
+    { name: "Merchandise" },
   ]);
 
   console.log("categories seeded");
 
   await Product.deleteMany();
 
-  const products = await Product.insertMany([
+  await Product.insertMany([
     {
       name: "Tin of Cookies",
       description:
