@@ -26,9 +26,9 @@ https://github.com/axeliono/hotel-hotel
 * Tatum Stafford
 * Obinna Ezekwe
 
-## Sreenshot of Hotel Hotel
+## Sreenshot of Hotel-Hotel
 
-![This is a screenshot of the Hotel Hotel application.](/assets/images/screenshot.JPG)<br />
+![This is a screenshot of the Hotel-Hotel application.](/assets/images/screenshot.JPG)<br />
 
 ## Available Scripts
 
