@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import Nav from '../Nav';
 import './style.css';
 
-const Icon = styled.span`
-    color: orange;
+const Icon = styled.a`
+    color: #ca361a;
     font-size: 3rem;
     padding-left: 3.5rem;
 `
@@ -14,10 +14,11 @@ const Icon = styled.span`
 export default function Header() {
     return (
         <header>
+               
             <div className="title">
-                <Icon><FaHotel /></Icon>
+                <Icon><Link to="/"><FaHotel /></Link></Icon>
                 <h1>
-                    <Link to="/">HOTEL</Link>
+                    <Link to="/"> HOTEL-HOTEL </Link>
                 </h1>
             </div>
             <Nav />

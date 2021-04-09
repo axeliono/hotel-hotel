@@ -26,8 +26,9 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
+    overflow: hidden;
 `
 
 const Button = styled.button`
@@ -43,16 +44,19 @@ export default function Footer() {
     return (
         <footer>
             <Wrapper>
-                <h1>HOTEL</h1>
+                <h1>HOTEL-HOTEL</h1>
                 <h2>1234 Street St.</h2>
                 <h2>Austin, TX 12345</h2>
                 <Button>
-                    <Link to="/">
+                    <Link to="/reservations">
                         BOOK NOW
                     </Link>
                 </Button>
             </Wrapper>
-            <Icon><FaHotel /></Icon>
+            
+                <Link to="/">
+                    <Icon><FaHotel /></Icon>
+                </Link>
             <Wrapper>
                 <h1>follow us on ... </h1>
                 <IconGroup>

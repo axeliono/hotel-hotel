@@ -5,3 +5,12 @@ img {
  padding-bottom: 1fr;
 
 }
+h1 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  display: flex;
+  justify-content: space-around;
+  /* text-shadow:.5px .5px #ffff; */
+  color: #eeb940;
+
+}

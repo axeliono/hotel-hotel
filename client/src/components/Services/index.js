@@ -24,7 +24,7 @@ const Icon = styled.span`
 const Title = styled.h3`
     padding: 2rem;
     font-size: 4rem;
-    text-shadow: 2px 2px #F21;
+    text-shadow: 1px 1px #ca361a;
         &:hover {
         text-shadow 4px 4px #F21;
         cursor: default
@@ -33,7 +33,7 @@ const Title = styled.h3`
 const Info = styled.p`
     padding: 2rem;
     font-size: 2rem;
-    text-shadow: 2px 2px #F21;
+    text-shadow: 1px 1px #ca361a;
         &:hover {
         text-shadow 4px 4px #F21;
         cursor: default
@@ -64,7 +64,7 @@ export default class Services extends Component {
 
   render() {
     return (
-      <div className="services-center">
+      <div className="services-center" style={{ backgroundColor: "#eeb940" }}>
         {this.state.services.map((item, index) => {
           return (
             <>
