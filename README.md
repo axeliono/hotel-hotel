@@ -26,7 +26,7 @@ https://github.com/axeliono/hotel-hotel
 * Tatum Stafford
 * Obinna Ezekwe
 
-## Sreenshot of Book Search Engine
+## Sreenshot of Hotel Hotel
 
 ![This is a screenshot of the Hotel Hotel application.](/assets/images/screenshot.JPG)<br />
 
