@@ -3,9 +3,12 @@
     color: #ca361a;
 }
 .nav_link {
-    color: #ca361a;
+    color: #010203;
 }
 a{
-    color: #ca361a;
+    color:orange;
     text-decoration: none;
+}
+a:hover{
+    color:#ca361a
 }

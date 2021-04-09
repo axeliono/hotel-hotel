@@ -13,27 +13,35 @@ const Wrapper = styled.section`
     width: 100%
     justify-content: space-evenly;
     `;
-// background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
-// background-repeat: no-repeat;
-// background-size: cover;
-const Icon = styled.span`
-  color: #010203;
-  padding: 2rem;
-  font-size: 3rem;
-`;
-const Title = styled.h3`
+    // background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    const Icon = styled.span`
+    color: #010203;
+    padding: 2rem;
+    font-size: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    
+    `
+    const Title = styled.h3
+    `
     padding: 2rem;
     font-size: 4rem;
     text-shadow: 1px 1px #ca361a;
+
         &:hover {
-        text-shadow 4px 4px #F21;
-        cursor: default
+        text-shadow 2px 2px #ca361a;
     }
     `;
 const Info = styled.p`
     padding: 2rem;
     font-size: 2rem;
     text-shadow: 1px 1px #ca361a;
+    align-items: center;
+    display: flex;
+    
         &:hover {
         text-shadow 4px 4px #F21;
         cursor: default
