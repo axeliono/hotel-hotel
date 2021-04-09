@@ -11,7 +11,8 @@ const Wrapper = styled.section`
 display: flex;
 justify-content: space-evenly;
 flex-direction: row;
-font-size: 1.2rem;
+font-size: 1.3rem;
+
     `;
 const Banner = styled.section`
 display: flex;

@@ -20,6 +20,9 @@ const Wrapper = styled.section`
     color: #010203;
     padding: 2rem;
     font-size: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content:center;
     
     `
     const Title = styled.h3
@@ -27,8 +30,10 @@ const Wrapper = styled.section`
     padding: 2rem;
     font-size: 4rem;
     text-shadow: 1px 1px #ca361a;
+
         &:hover {
         text-shadow 2px 2px #ca361a;
+        
     }
     `
 const Info = styled.p
@@ -36,6 +41,9 @@ const Info = styled.p
     padding: 2rem;
     font-size: 2rem;
     text-shadow: 1px 1px #ca361a;
+    align-items: center;
+    display: flex;
+    
         &:hover {
         text-shadow 2px 2px #ca361a;
     }
