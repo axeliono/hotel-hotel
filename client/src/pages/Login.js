@@ -126,7 +126,7 @@ export default function SignIn() {
           <FormControlLabel
             control={<Checkbox value="remember" color="#ca361a"/>}
             label="Keep me signed in"
-          /> */
+          /> 
           <Button
             type="submit"
             fullWidth
