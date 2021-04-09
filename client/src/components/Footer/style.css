@@ -1,11 +1,12 @@
 footer {
     width: 100%;
-    height: 9rem;
+    height: 12rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     border-top: 2px solid orange;
+    line-height: .6;
 }
 
 .m-top {

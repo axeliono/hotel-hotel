@@ -6,7 +6,7 @@ import Nav from '../Nav';
 import './style.css';
 
 const Icon = styled.a`
-    color: orange;
+    color: #ca361a;
     font-size: 3rem;
     padding-left: 3.5rem;
 `
