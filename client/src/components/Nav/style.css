@@ -2,13 +2,8 @@
     transform:scale(1.5,1.5);
     color: #ca361a;
 }
-.nav_link {
-    color: #010203;
-}
+
 a{
     color:orange;
     text-decoration: none;
-}
-a:hover{
-    color:#ca361a
 }

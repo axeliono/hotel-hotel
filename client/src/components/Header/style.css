@@ -17,6 +17,23 @@ header {
     
 }
 
+
 .title h1 {
     padding-left: 10px;
+}
+a {
+    color: #010203;
+    text-decoration: none;
+
+}
+.nav_link:hover{
+  color:  #ca361a;
+  transform: scale(1.5);
+}
+#branding:hover{
+    color:  #ca361a;
+    transform: scale(1.2);
+}
+#branding a:hover{
+    color: #ca361a
 }

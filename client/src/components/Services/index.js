@@ -28,7 +28,7 @@ const Wrapper = styled.section`
     const Title = styled.h3
     `
     padding: 2rem;
-    font-size: 4rem;
+    font-size: 3.8rem;
     text-shadow: 1px 1px #ca361a;
 
         &:hover {
@@ -43,7 +43,7 @@ const Info = styled.p`
     display: flex;
     
         &:hover {
-        text-shadow 4px 4px #F21;
+        text-shadow 2px 2px #F21;
         cursor: default
     }
     `;
