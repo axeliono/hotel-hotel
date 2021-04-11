@@ -16,7 +16,7 @@ export default function Header() {
     return (
         <header>
                
-            <div className="title">
+            <div className="title" id="branding">
                 <Icon><Link to="/"><FaHotel /></Link></Icon>
                 <h1>
                     <Link to="/"> HOTEL-HOTEL </Link>
