@@ -7,19 +7,30 @@ import "../../index.css";
 
 const Wrapper = styled.section`
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     height: 100%
     width: 100%
     justify-content: space-evenly;
+
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+    }
     `;
     // background-image: url("https://i.imgur.com/6Fk4rE6.jpg");
     // background-repeat: no-repeat;
     // background-size: cover;
     const Icon = styled.span`
     color: #010203;
-    padding: 2rem;
-    font-size: 3rem;
+    padding: 10%;
+    font-size: 200%;
     align-items: center;
     display: flex;
     justify-content:center;
@@ -27,17 +38,20 @@ const Wrapper = styled.section`
     `
     const Title = styled.h3
     `
-    padding: 2rem;
-    font-size: 3.8rem;
+    display: flex;
+    
+    padding: 10%;
+    font-size: 200%;
     text-shadow: 1px 1px #ca361a;
+    align-items: center;
 
         &:hover {
         text-shadow 2px 2px #ca361a;
     }
     `;
 const Info = styled.p`
-    padding: 2rem;
-    font-size: 2rem;
+    padding: 10%;
+    font-size: 200%;
     text-shadow: 1px 1px #ca361a;
     align-items: center;
     display: flex;
@@ -77,7 +91,7 @@ export default class Services extends Component {
           return (
             <>
               <article key={index} className="service">
-                <Wrapper>
+                <Wrapper className="services">
                   <Icon>{item.icon}</Icon>
                   <Title>{item.title}</Title>
                   <Info>{item.info}</Info>
