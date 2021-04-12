@@ -1,0 +1,39 @@
+header {
+    
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #ca361a !important;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    width: 30%;
+    
+}
+
+
+.title h1 {
+    padding-left: 10px;
+}
+a {
+    color: #010203;
+    text-decoration: none;
+
+}
+.nav_link:hover{
+  color:  #ca361a;
+  transform: scale(1.5);
+}
+#branding:hover{
+    color:  #ca361a;
+    transform: scale(1.2);
+}
+#branding a:hover{
+    color: #ca361a
+}

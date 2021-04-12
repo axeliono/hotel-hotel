@@ -1,0 +1,16 @@
+.banner{
+    background-color: #ca361a;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: #eeb940;
+    
+}
+h2{
+    text-shadow: 1px 1px #ffff;
+}
+p{
+    text-shadow:1px 1px #ffff;
+}
